@@ -1,0 +1,25 @@
+# Local configuration and Python virtual environments
+.env
+.env.*
+!.env.example
+.venv/
+
+# Python cache, test output, and generated documentation
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage*
+htmlcov/
+docs/build/
+
+# Runtime data and local storage
+uploads/
+*.sqlite3
+*.db
+*.log
+
+# Editor files
+.DS_Store
+.idea/
+.vscode/

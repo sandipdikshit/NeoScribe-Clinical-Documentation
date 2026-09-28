@@ -1,0 +1,25 @@
+{
+	"api": {
+		"errors": {
+			"Success": "Success!",
+			"SomethingWentWrong": "Something went wrong...",
+			"EmailAlreadyExists": "Email Already Exists...",
+			"IncorrectPassword": "Incorrect Password!!!",
+			"EmailNotRegistered": "Email not registered with us!!!",
+			"IncorrectOTP": "Incorrect/Expired OTP!!!",
+			"AccessTokenRequired": "Access Token is required",
+			"InvalidOrExpiredToken": "Invalid/Expired Token"
+		},
+		"msg": {
+			"Success": "Success!",
+			"SomethingWentWrong": "Something went wrong...",
+			"ClientSignupSuccess": "ClientSignupSuccess",
+			"EmailAlreadyExists": "Email Already Exists...",
+			"LoginSuccess": "User login successfully...",
+			"OTPSentSuccessfully": "OTP sent successfully...",
+			"OTPVerifiedSuccessfully": "OTP verification successful",
+			"TokenVerifiedSuccessfully": "Token verified successfully",
+			"PasswordChangedSuccessfully": "Password Changed Successfully"
+		}
+	}
+}

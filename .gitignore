@@ -1,0 +1,25 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+
+# Dependencies and build output
+**/node_modules/
+**/.next/
+**/dist/
+**/build/
+**/.venv/
+**/__pycache__/
+**/*.py[cod]
+
+# Local data and generated artifacts
+services/api/uploads/
+services/api/docs/build/
+*.sqlite3
+*.db
+*.log
+
+# Editor and operating-system files
+.DS_Store
+.idea/
+.vscode/

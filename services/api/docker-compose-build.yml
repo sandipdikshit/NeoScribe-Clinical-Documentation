@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    env_file:
+      - .env
+    ports:
+      - "5000:80"
+    volumes:
+      - .:/src
+    command: poetry run uvicorn app.main:app --host 0.0.0.0 --port 80 --workers 4

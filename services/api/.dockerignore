@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyo
+*.pyc
+*.pyd
+
+# Poetry virtual environment directory
+.venv/
+
+# Environments
+.env
+
+# Do not ignore .env.example
+!.env.example
+
+# macOS specific files
+.DS_Store
+
+# VS Code specific files
+.vscode/
+
+# Logs
+*.log
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Pytest cache and test result files
+.pytest_cache/
+test-results/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Generated files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Docker specific files
+Dockerfile
+docker-compose.yml
+docker-compose-local-nodb.yml
+
+# Ignore local development script
+local-dev.sh
