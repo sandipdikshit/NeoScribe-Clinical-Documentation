@@ -14,7 +14,7 @@ from typing import Dict, Any
 #routes
 from app.v2.routers.provider import router as user_router
 from app.v2.routers.patient import router as patient_router
-from app.v2.routers.test_router import router as test_router
+from app.v2.routers.health import router as health_router
 from app.v2.routers.note import router as note_router
 from app.v2.routers.sections import router as section_router
 from app.v2.routers.transcribe import router as transcribe_router
@@ -44,7 +44,8 @@ def validate_and_include_routers() -> None:
         "feedback_router": feedback_router,
         "template_router": template_router,
         "audit_log_router": audit_log_router,
-        "upload_router": upload_router
+        "upload_router": upload_router,
+        "health_router": health_router,
     }
     
     # Check if all required routers are available
@@ -66,6 +67,7 @@ def validate_and_include_routers() -> None:
         router.include_router(template_router)
         router.include_router(audit_log_router)
         router.include_router(upload_router)
+        router.include_router(health_router)
         
         logger.info("Successfully initialized NeoScribe API V2 Router")
         
@@ -82,17 +84,6 @@ except RuntimeError as e:
     # In a production environment, you might want to exit here
     # import sys
     # sys.exit(1)
-
-# Include test routes only in development environment
-if os.getenv("ENV") == "dev":
-    try:
-        if test_router is not None:
-            router.include_router(test_router, prefix="/test")
-            logger.info("Test routes included for development environment")
-        else:
-            logger.warning("Test router not available for development environment")
-    except Exception as e:
-        logger.error(f"Failed to include test router: {str(e)}")
 
 @router.get("/")
 def root():

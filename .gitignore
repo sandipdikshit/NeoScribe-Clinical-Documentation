@@ -15,6 +15,7 @@
 # Local data and generated artifacts
 services/api/uploads/
 services/api/docs/build/
+services/api/transcription.json
 *.sqlite3
 *.db
 *.log
